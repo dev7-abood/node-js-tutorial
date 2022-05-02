@@ -14,6 +14,6 @@ const helloWorldFromController = require('../controllers/products')
 // });
 
 
-router.get('/', helloWorldFromController.helloWorldFromController);
+router.get('/:name?', helloWorldFromController.helloWorldFromController);
 
 module.exports = router;
