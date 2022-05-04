@@ -7,7 +7,7 @@ const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 const path = require("path");
 const routDir = require("./util/path");
-const port = 3000;
+const port = process.env.PORT;
 
 app.use(bodyParser.urlencoded({extended : false}));
 app.use(express.static(path.join(routDir, 'public')));
