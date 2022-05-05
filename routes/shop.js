@@ -15,5 +15,6 @@ const helloWorldFromController = require('../controllers/products')
 
 
 router.get('/:name?', helloWorldFromController.helloWorldFromController);
+router.get('/name/cookie', helloWorldFromController.setCookie);
 
 module.exports = router;

@@ -28,11 +28,6 @@ app.use((req, res, next) => {
 
 const port = process.env.PORT;
 
-productsModel.sync().then(result => {
-    console.log(result)
-}).catch(err => {
-    console.log(err)
-})
 
 productsModel.create({
     title : 'Abood',
@@ -40,6 +35,13 @@ productsModel.create({
     imageUrl : 'imageUrl',
     description : 'description'
 })
+
+productsModel.sync().then(result => {
+    console.log(result)
+}).catch(err => {
+    console.log(err)
+})
+
 
 app.listen(port, () => {
     console.log(`App listening on port ${port}`);

@@ -1,4 +1,4 @@
-const sequelize = require('../config/database');
+const sequelize = require('../config/mysql');
 const products = require('../database/migrations/products');
 
 const Product = sequelize.define('products', products)
